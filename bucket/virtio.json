@@ -5,10 +5,12 @@
     "license": "GPL-2.0 license",
     "architecture": {
         "64bit": {
-            "url": "https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win-guest-tools.exe"
+            "url": "https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win-guest-tools.exe",
+            "hash": ""
         },
         "32bit": {
-            "url": "https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win-guest-tools.exe"
+            "url": "https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win-guest-tools.exe",
+            "hash": ""
         }
     },
     "checkver": {
