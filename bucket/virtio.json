@@ -5,6 +5,9 @@
     "license": "GPL-2.0 license",
     "url": "https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win-guest-tools.exe",
     "hash": "3491722bd4c6395f80ba13d3caa1b212629d332143b1b62db08f1ae5bdcaf4e0",
+    "post_install": [
+        "Invoke-ExternalCommand msiexec -ArgumentList @('/i', \"$dir\\$fname\", '/quiet', '/norestart') -RunAs | Out-Null"
+    ],
     "checkver": {
         "url": "https://github.com/virtio-win/virtio-win-pkg-scripts/raw/master/virtio-win.spec",
         "regex": "Version:\\s+([\\d._]+)"
