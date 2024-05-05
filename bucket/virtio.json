@@ -6,8 +6,10 @@
     "url": "https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win-guest-tools.exe",
     "hash": "3491722bd4c6395f80ba13d3caa1b212629d332143b1b62db08f1ae5bdcaf4e0",
     "post_install": [
-        "dir \"$dir\"",
-        "Invoke-ExternalCommand \"$dir\\virtio-win-guest-tools.exe\", '/quiet', '/norestart') -RunAs | Out-Null"
+        "Invoke-ExternalCommand -FilePath \"$dir\\virtio-win-guest-tools.exe\" -ArgumentList '/install', '/quiet', '/norestart' -RunAs | Out-Null"
+    ],
+    "post_uninstall": [
+        "Invoke-ExternalCommand -FilePath \"$dir\\virtio-win-guest-tools.exe\" -ArgumentList '/uninstall', '/quiet', '/norestart' -RunAs | Out-Null"
     ],
     "checkver": {
         "url": "https://github.com/virtio-win/virtio-win-pkg-scripts/raw/master/virtio-win.spec",
