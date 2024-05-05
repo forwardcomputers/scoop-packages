@@ -3,28 +3,13 @@
     "description": "Paravirtualized drivers for QEMU/KVM",
     "homepage": "https://www.linux-kvm.org/page/WindowsGuestDrivers",
     "license": "GPL-2.0 license",
-    "architecture": {
-        "64bit": {
-            "url": "https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win-guest-tools.exe",
-            "hash": ""
-        },
-        "32bit": {
-            "url": "https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win-guest-tools.exe",
-            "hash": ""
-        }
-    },
+    "url": "https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win-guest-tools.exe",
+    "hash": "3491722bd4c6395f80ba13d3caa1b212629d332143b1b62db08f1ae5bdcaf4e0",
     "checkver": {
         "url": "https://github.com/virtio-win/virtio-win-pkg-scripts/raw/master/virtio-win.spec",
-        "regex": "Version<\\/b>:\\s+([\\d._]+)"
+        "regex": "Version:\\s+([\\d._]+)"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win-guest-tools.exe"
-            },
-            "32bit": {
-                "url": "https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win-guest-tools.exe"
-            }
-        }
+        "url": "https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win-guest-tools.exe"
     }
 }
