@@ -1,5 +1,5 @@
 {
-    "version": "0.1-248",
+    "version": "0.1.248",
     "description": "Paravirtualized drivers for QEMU/KVM",
     "homepage": "https://www.linux-kvm.org/page/WindowsGuestDrivers",
     "license": "GPL-2.0 license",
