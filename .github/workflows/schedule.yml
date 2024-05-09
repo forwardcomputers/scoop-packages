@@ -17,3 +17,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SKIP_UPDATED: 1
+      - name: Update readme
+        shell: pwsh
+        run: ./bin/update_readme.ps1
