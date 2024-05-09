@@ -12,11 +12,21 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@main
+
       - name: Excavate
         uses: ScoopInstaller/GithubActions@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SKIP_UPDATED: 1
+
       - name: Update readme
         shell: pwsh
         run: ./bin/update_readme.ps1
+
+      - name: commit and push
+        run: |
+          git config --local user.email "alim@forwardcomputers.com"
+          git config --local user.name "Ali Mustakim"
+          git add .
+          git diff-index --quiet HEAD || git commit -a -m "github actions update"
+          git push origin
