@@ -1,10 +1,10 @@
 {
-    "version": "0.1.271",
+    "version": "0.1.285",
     "description": "Paravirtualized drivers for QEMU/KVM",
     "homepage": "https://www.linux-kvm.org/page/WindowsGuestDrivers",
     "license": "GPL-2.0 license",
     "url": "https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win-guest-tools.exe",
-    "hash": "21a2c7d7607ca52de3d7f57b57c8ba8752b9ba68ca89b54de48ff266091b14e4",
+    "hash": "c8b4a9fe87e1fc5d8e843495e082dea53420587fe04740b1084d85089343f04d",
     "pre_install": "if (!(is_admin)) { error 'Admin privileges are required.'; break }",
     "installer": {
         "script": "Invoke-ExternalCommand -FilePath \"$dir\\virtio-win-guest-tools.exe\" -ArgumentList '/install', '/quiet', '/norestart' -RunAs | Out-Null"
